@@ -1,0 +1,38 @@
+<div class="destination-activities-container">
+  <h2 class="title">Find Activities for Your Destination</h2>
+
+  <label for="destination">Enter Destination:</label>
+  <input
+    id="destination"
+    type="text"
+    [(ngModel)]="destination"
+    placeholder="Enter destination name"
+    class="destination-input"
+  />
+
+  <button (click)="fetchActivities()" [disabled]="isLoading" class="fetch-button">Get Activities</button>
+
+  <!-- Error Message -->
+  <p *ngIf="error" class="error-message">{{ error }}</p>
+
+  <!-- Loading Indicator -->
+  <p *ngIf="isLoading" class="loading-message">Loading activities...</p>
+
+  <!-- Display Activities -->
+  <div *ngIf="activities" class="activities-container">
+    <h3>Activities in {{ destination }}:</h3>
+    <div [innerHTML]="activities" class="activities-list"></div>
+  </div>
+
+  <!-- Display Images in Slideshow -->
+  <div *ngIf="images.length > 0" class="slideshow-container">
+    <h3>Images of {{ destination }}:</h3>
+    <div class="slideshow">
+      <div *ngFor="let image of images; let i = index"
+           [class.active]="i === currentImageIndex"
+           class="slide">
+        <img [src]="image" alt="Destination Image" class="destination-image" />
+      </div>
+    </div>
+  </div>
+</div>

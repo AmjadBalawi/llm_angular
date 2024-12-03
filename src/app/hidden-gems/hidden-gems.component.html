@@ -1,0 +1,32 @@
+<div class="destination-activities-container">
+
+    <h2 class="title">Hidden Gems for Your Destination</h2>
+
+    <!-- Destination Input -->
+    <label for="destination">Enter Destination:</label>
+    <input
+        id="destination"
+        type="text"
+        [(ngModel)]="destination"
+        placeholder="Enter destination name"
+        class="destination-input"
+    />
+
+    <!-- Fetch Button -->
+    <button (click)="fetchActivities()" [disabled]="isLoading" class="fetch-button">
+        Get Activities
+    </button>
+
+    <!-- Error Message -->
+    <p *ngIf="error" class="error-message">{{ error }}</p>
+
+    <!-- Loading Indicator -->
+    <p *ngIf="isLoading" class="loading-message">Loading activities...</p>
+
+    <!-- Display Hidden Gems -->
+    <div *ngIf="activities" class="activities-container">
+        <h3>Hidden Gems in {{ destination }}:</h3>
+        <div [innerHTML]="activities" class="activities-list"></div>
+    </div>
+    
+</div>
