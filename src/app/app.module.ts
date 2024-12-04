@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { HiddenGemsComponent } from '../app/hidden-gems/hidden-gems.component'; // Only declare non-standalone components
 import { DestinationActivitiesComponent } from '../app/destination-activities/destination-activities.component'; // Only declare non-standalone components
+import { TranslateComponent } from './translate-service/translate.component'; // Import the new component
 
 @NgModule({
   imports: [
@@ -10,7 +11,8 @@ import { DestinationActivitiesComponent } from '../app/destination-activities/de
     RouterModule.forRoot([
       { path: '', redirectTo: '/hidden-gems', pathMatch: 'full' },
       { path: 'hidden-gems', component: HiddenGemsComponent },
-      { path: 'destination-activities', component: DestinationActivitiesComponent } // Include directly in routes
+      { path: 'destination-activities', component: DestinationActivitiesComponent},
+      { path: 'translate-service', component: TranslateComponent } // Ensure this route exists
     ])
   ],
   providers: [],

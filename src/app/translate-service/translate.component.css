@@ -1,0 +1,81 @@
+/* Container for the translator */
+.translate-container {
+    max-width: 600px;            /* Set max width for better layout */
+    margin: 50px auto;          /* Center the container */
+    padding: 20px;              /* Add padding around the container */
+    background-color: #f9f9f9;  /* Light background color */
+    border-radius: 8px;         /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    font-family: 'Arial', sans-serif; /* Use a clean font */
+}
+
+/* Header style */
+h2 {
+    text-align: center;          /* Centered header */
+    color: #333;                /* Darker text color */
+}
+
+/* Label styles */
+label {
+    display: block;             /* Block display to stack labels and inputs */
+    margin-top: 20px;          /* Space above each label */
+    font-weight: bold;          /* Bold labels for emphasis */
+    color: #555;                /* Slightly lighter text color for labels */
+}
+
+/* Input field styles */
+.input-field,
+.output-field {
+    width: 100%;               /* Full width for inputs */
+    padding: 10px;            /* Padding inside inputs */
+    margin-top: 5px;          /* Space above inputs */
+    border: 1px solid #ccc;   /* Light gray border */
+    border-radius: 4px;       /* Slightly rounded corners */
+    font-size: 16px;          /* Font size */
+    transition: border-color 0.3s; /* Smooth transition on focus */
+    resize: vertical;          /* Allow vertical resizing for text areas */
+}
+
+.input-field:focus,
+.output-field:focus {
+    border-color: #007bff;    /* Blue border on focus */
+    outline: none;            /* Remove default outline */
+}
+
+/* Button styles */
+.translate-button {
+    display: block;            /* Block display to center the button */
+    width: 100%;              /* Full width for the button */
+    padding: 10px;           /* Padding inside the button */
+    background-color: #007bff; /* Bootstrap primary blue */
+    color: white;             /* White text color */
+    border: none;             /* No border */
+    border-radius: 4px;      /* Slightly rounded corners */
+    font-size: 16px;          /* Font size */
+    cursor: pointer;          /* Pointer cursor on hover */
+    margin-top: 20px;        /* Space above the button */
+    transition: background-color 0.3s; /* Smooth background change */
+}
+
+.translate-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Error message styles */
+.error-message {
+    color: red;               /* Red text for errors */
+    margin-top: 10px;        /* Margin above error message */
+}
+
+/* Translated output styles */
+.translated-output {
+    margin-top: 20px;         /* Space above translated output */
+    padding: 10px;            /* Padding inside output box */
+    background-color: #e7f3fe; /* Light blue background */
+}
+
+/* Style for the read-only output */
+.output-field {
+    resize: none;             /* Prevent resizing of the output field */
+    background-color: #f0f8ff; /* Light background for the output area */
+}

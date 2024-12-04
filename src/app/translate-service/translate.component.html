@@ -1,0 +1,50 @@
+<div class="translate-container">
+    <h2>Text Translator</h2>
+
+    <!-- Input for Text to Translate -->
+    <label for="text">Text to Translate:</label>
+    <textarea
+        id="text"
+        [(ngModel)]="text"
+        name="text"
+        placeholder="Enter text here"
+        class="input-field"
+        rows="4"
+    ></textarea>
+
+    <!-- Input for Target Language -->
+    <label for="targetLanguage">Target Language:</label>
+    <select
+        id="targetLanguage"
+        [(ngModel)]="targetLanguage"
+        name="targetLanguage"
+        class="input-field"
+    >
+        <option value="" disabled selected>Select a language</option> <!-- Placeholder option -->
+        <option value="English">English</option>
+        <option value="Spanish">Spanish</option>
+        <option value="French">French</option>
+        <option value="German">German</option>
+        <option value="Chinese">Chinese</option>
+        <option value="Japanese">Japanese</option>
+        <option value="Russian">Russian</option>
+        <option value="Italian">Italian</option>
+        <option value="Portuguese">Portuguese</option>
+        <option value="Arabic">Arabic</option>
+        <option value="hungarian">Hungarian</option>
+        <option value="Russian">Russian</option>
+        <!-- Add more languages as needed -->
+    </select>
+
+    <!-- Translate Button -->
+    <button (click)="TranslatedText()" class="translate-button">Translate</button>
+
+    <!-- Error Message -->
+    <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+
+    <!-- Translated Text Output -->
+    <div *ngIf="translatedText" class="translated-output">
+        <h3>Translated Text:</h3>
+        <textarea class="output-field" readonly rows="4">{{ translatedText }}</textarea>
+    </div>
+</div>
