@@ -1,94 +1,167 @@
-/* Overall container for destination activities */
+/* Container Styling */
 .destination-activities-container {
-  width: 80%;
-  margin: 0 auto;
+  max-width: 600px;
+  margin: 50px auto;
   padding: 20px;
-  background-color: #f9f9f9; /* Light background for better contrast */
-  border-radius: 8px; /* Rounded corners for aesthetics */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  font-family: 'Arial', sans-serif; /* Default font */
-  color: #333; /* Dark text for readability */
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  font-family: 'Roboto', sans-serif;
 }
 
 /* Title */
-.title {
-  font-size: 2em; /* Larger size for emphasis */
-  font-weight: 600; /* Bold text */
-  color: #4CAF50; /* Green color for title */
-  text-align: center; /* Centered text */
-  margin-bottom: 20px; /* Space below the title */
+.destination-activities-container .title {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  color: #333333;
+  margin-bottom: 20px;
 }
 
-/* Input field styling */
+/* Label Styling */
+.destination-activities-container label {
+  font-size: 16px;
+  color: #555555;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* Destination Input */
 .destination-input {
-  width: 100%; /* Full-width input */
-  padding: 10px; /* Inner padding for comfort */
-  font-size: 1em; /* Standard font size */
-  border: 2px solid #ccc; /* Light gray border */
-  border-radius: 4px; /* Slightly rounded corners */
-  margin: 10px 0; /* Space around the input */
-  transition: border-color 0.3s ease; /* Smooth transition for focus */
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  background: #f9f9f9;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Input Focus State */
 .destination-input:focus {
-  border-color: #4CAF50; /* Change to green on focus */
-  outline: none; /* Remove default outline */
+  border-color: #4caf50;
+  box-shadow: 0 0 6px rgba(76, 175, 80, 0.3);
+  outline: none;
 }
 
-/* Slideshow container */
+/* Fetch Button */
+.fetch-button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #4caf50, #2196f3);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Button Hover Effect */
+.fetch-button:hover {
+  background: linear-gradient(90deg, #2196f3, #4caf50);
+  transform: scale(1.02); /* Slightly enlarge */
+}
+
+/* Disabled Button */
+.fetch-button:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Error Message */
+.error-message {
+  color: #d32f2f;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Loading Message */
+.loading-message {
+  font-size: 14px;
+  color: #4caf50;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Activities Container */
+.activities-container {
+  margin-top: 30px;
+}
+
+.activities-container h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.activities-list {
+  background: #f9f9f9;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333333;
+  line-height: 1.6;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Scroll if content overflows */
+  max-height: 300px; /* Set a max height for long content */
+}
+
+/* Slideshow Container */
 .slideshow-container {
-  position: relative; /* Allows positioning of navigation buttons */
-  max-width: 80%; /* Maintain consistency with main container */
-  margin-top: 20px; /* Space above slideshow */
+  margin-top: 30px;
+  text-align: center;
+}
+
+.slideshow-container h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 10px;
 }
 
 .slideshow {
-  display: flex; /* Flexible box model for slides */
-  overflow: hidden; /* Hide overflow */
-  width: 100%; /* Full-width for responsiveness */
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
 }
 
 .slide {
-  display: none; /* Hidden by default */
-  flex: 1 0 100%; /* Flex as a full-width item */
-  justify-content: center; /* Center content within */
+  display: none;
+  transition: opacity 0.5s ease;
 }
 
 .slide.active {
-  display: block; /* Show active slide */
+  display: block;
+  opacity: 1;
 }
 
-/* Image styling for the destination */
 .destination-image {
-  width: 100%; /* Full width for images */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 8px; /* Rounded corners for images */
-  object-fit: cover; /* Cover to maintain aspect ratio */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for images */
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Navigation buttons */
-.nav-btn {
-  position: absolute; /* Positioned relative to the slideshow */
-  top: 50%; /* Centered vertically */
-  padding: 10px; /* Padding for touch targets */
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  color: white; /* White text for contrast */
-  border: none; /* No border */
-  font-size: 16px; /* Standard button text size */
-  cursor: pointer; /* Pointer cursor on hover */
-  z-index: 10; /* Ensure buttons are above other content */
-  border-radius: 50%; /* Round buttons */
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .destination-activities-container {
+    padding: 15px;
+    margin: 20px auto;
+  }
 
-.prev-btn {
-  left: 10px; /* Position for previous button */
-}
+  .destination-activities-container .title {
+    font-size: 24px;
+  }
 
-.next-btn {
-  right: 10px; /* Position for next button */
-}
-
-.nav-btn:hover {
-  background-color: rgba(0, 0, 0, 0.7); /* Darker on hover */
+  .fetch-button {
+    font-size: 14px;
+  }
 }

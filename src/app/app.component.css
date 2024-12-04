@@ -1,31 +1,103 @@
+/* Body Styling */
+body {
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* Vibrant gradient */
+  color: #ffffff; /* Text color to contrast with the background */
+  font-family: 'Roboto', sans-serif; /* Clean, modern font */
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-attachment: fixed; /* Make background fixed to create parallax effect */
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Navbar Styling */
 .navbar {
-  background-color: #333;
-  padding: 10px;
-  text-align: center;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background */
+  padding: 10px 30px; /* Reduced padding for a shorter navbar */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure the navbar stays on top */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  transition: background 0.3s ease; /* Smooth background transition */
+}
+
+.navbar.scrolled {
+  background: rgba(0, 0, 0, 0.8); /* Darker navbar when scrolled */
 }
 
 .navbar ul {
-  list-style-type: none;
-  margin: 0;
+  list-style: none;
   padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .navbar li {
-  display: inline;
-  margin: 0 15px;
+  margin: 0 20px; /* Space between navbar items */
 }
 
 .navbar a {
-  color: white;
   text-decoration: none;
-  font-size: 18px;
+  color: white;
+  font-size: 16px; /* Slightly smaller font for a more compact navbar */
+  font-weight: bold;
+  text-transform: uppercase; /* Uppercase text for emphasis */
+  letter-spacing: 1px; /* Add spacing between letters */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  padding: 5px 10px; /* Small padding for clickable area */
 }
 
 .navbar a:hover {
-  text-decoration: underline;
+  color: #f39c12; /* Golden hover color */
+  transform: scale(1.1); /* Slight zoom effect */
 }
 
-.active {
+/* Logo container */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between elements */
+  justify-content: flex-start; /* Align logo to the left */
+}
+
+.logo span {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px; /* Slightly smaller font size for the logo */
   font-weight: bold;
-  color: #FFD700;
+  color: white;
+  background: linear-gradient(90deg, #ff9800, #ffc107); /* Gradient text */
+  -webkit-background-clip: text; /* Clip gradient to text */
+  -webkit-text-fill-color: transparent; /* Transparent text fill */
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); /* More pronounced shadow */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.logo span:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+  opacity: 0.8; /* Slight transparency on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center;
+  }
+
+  .navbar li {
+    margin: 10px 0; /* Reduce spacing between navbar items */
+  }
+
+  .navbar a {
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+}
+
+/* Body padding to account for fixed navbar */
+body {
+  padding-top: 70px; /* Add space for the fixed navbar */
 }

@@ -27,14 +27,16 @@
 -->
 
 <div class="navbar">
+  <div class="logo">
+    <span>GoExplore</span>
+  </div>
   <ul>
-    <li><a routerLink="/hidden-gems" routerLinkActive="active">Hidden Gems</a></li>
-    <li><a routerLink="/destination-activities" routerLinkActive="active">Destination Activities</a></li> 
-    <li><a routerLink="/translate-service" routerLinkActive="active">Translate</a></li> <!-- Add this line -->
-    <li><a routerLink="/cultural-tips" routerLinkActive="active">Cultural Tips</a></li> <!-- Add this line -->
-
+    <li><a routerLink="/hidden-gems" routerLinkActive="active"><i class="fas fa-gem"></i> Hidden Gems</a></li>
+    <li><a routerLink="/destination-activities" routerLinkActive="active"><i class="fas fa-map-marker-alt"></i> Destination Activities</a></li>
+    <li><a routerLink="/translate-service" routerLinkActive="active"><i class="fas fa-language"></i> Translate</a></li>
+    <li><a routerLink="/cultural-tips" routerLinkActive="active"><i class="fas fa-lightbulb"></i> Cultural Tips</a></li>
   </ul>
 </div>
 
-<router-outlet></router-outlet> <!-- This line is crucial -->
+<router-outlet></router-outlet>
 
