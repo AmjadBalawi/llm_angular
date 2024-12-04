@@ -1,0 +1,20 @@
+<div class="cultural-tips-container">
+    <h2>Cultural Tips</h2>
+    <label for="location">Enter Location:</label>
+    <input
+        type="text"
+        id="location"
+        [(ngModel)]="location"
+        placeholder="e.g., Paris"
+        class="input-field"
+    />
+
+    <button (click)="getCulturalTips()" class="fetch-button">Get Tips</button>
+
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+
+    <div *ngIf="culturalTips" class="cultural-tips-output">
+        <h3>Cultural Tips:</h3>
+        <div [innerHTML]="culturalTips"></div> <!-- Correctly use property binding for sanitized content -->
+    </div>
+</div>
