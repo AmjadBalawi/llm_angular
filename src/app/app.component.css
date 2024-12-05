@@ -95,11 +95,11 @@ body {
   }
 
   .navbar li {
-    margin: 5px 0; /* Reduce spacing between navbar items */
+    margin: 0.5px 0; /* Reduce spacing between navbar items */
   }
 
   .navbar a {
-    font-size: 8px; /* Adjust font size for smaller screens */
+    font-size: 7px; /* Adjust font size for smaller screens */
   }
 
   /* Body Padding for mobile to account for the fixed navbar */
