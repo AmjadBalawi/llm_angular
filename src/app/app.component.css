@@ -81,23 +81,29 @@ body {
   opacity: 0.8; /* Slight transparency on hover */
 }
 
+/* Default Body Padding for Fixed Navbar */
+body {
+  padding-top: 70px; /* Adjust space for the fixed navbar */
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .navbar ul {
-    flex-direction: column; /* Stack items vertically on smaller screens */
-    align-items: center;
+    flex-direction: row; /* Stack items vertically on smaller screens */
+    align-items: top;
+    height: 3px;
   }
 
   .navbar li {
-    margin: 10px 0; /* Reduce spacing between navbar items */
+    margin: 5px 0; /* Reduce spacing between navbar items */
   }
 
   .navbar a {
-    font-size: 16px; /* Adjust font size for smaller screens */
+    font-size: 8px; /* Adjust font size for smaller screens */
   }
-}
 
-/* Body padding to account for fixed navbar */
-body {
-  padding-top: 70px; /* Add space for the fixed navbar */
+  /* Body Padding for mobile to account for the fixed navbar */
+  body {
+    padding-top: 80px; /* Add more space if navbar height increases on mobile */
+  }
 }
