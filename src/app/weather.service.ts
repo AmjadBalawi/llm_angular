@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class WeatherService {
-  private apiUrl = 'https://llm-fastapi.fly.dev/weather'; // FastAPI endpoint
+  private apiUrl = 'https://mml-fastapi.fly.dev/weather'; // FastAPI endpoint
 
   constructor(private http: HttpClient) {}
 
