@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class DestinationActivitiesService {
-  private apiUrl = 'http://127.0.0.1:8000/api/destination-activities';
+  private apiUrl = 'https://mml-fastapi-qrndzw.fly.dev/api/destination-activities';
 
   constructor(private http: HttpClient) {}
 
