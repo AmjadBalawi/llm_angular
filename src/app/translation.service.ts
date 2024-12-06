@@ -11,7 +11,7 @@ interface TranslationRequest {
   providedIn: 'root'
 })
 export class TranslationService {
-  private apiUrl = 'http://127.0.0.1:8000/translate'; // Update this URL if needed
+  private apiUrl = 'https://mml-fastapi-qrndzw.fly.dev/translate'; // Update this URL if needed
 
   constructor(private http: HttpClient) {}
 
