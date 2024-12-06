@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 
 export class CulturalTipsService {
-  private apiUrl = 'https://llm-fastapi.fly.dev/cultural-tips'; // Update with your API base URL if deployed
+  private apiUrl = 'https://mml-fastapi.fly.dev/cultural-tips'; // Update with your API base URL if deployed
 
   constructor(private http: HttpClient) {}
 
