@@ -5,7 +5,7 @@ import { HiddenGemsComponent } from '../app/hidden-gems/hidden-gems.component'; 
 import { DestinationActivitiesComponent } from '../app/destination-activities/destination-activities.component'; // Only declare non-standalone components
 import { TranslateComponent } from './translate-service/translate.component'; // Import the new component
 import { CulturalTipsComponent } from './cultural-tips/cultural-tips.component'; // Import your new component
-
+import { WeatherComponent } from './weather/weather.component'; // Import the new weather component
 @NgModule({
   imports: [
     BrowserModule,
@@ -14,7 +14,9 @@ import { CulturalTipsComponent } from './cultural-tips/cultural-tips.component';
       { path: 'hidden-gems', component: HiddenGemsComponent },
       { path: 'destination-activities', component: DestinationActivitiesComponent},
       { path: 'translate-service', component: TranslateComponent },
-      { path: 'cultural-tips', component: CulturalTipsComponent } // Ensure this route exists
+      { path: 'cultural-tips', component: CulturalTipsComponent },
+      { path: 'weather', component: WeatherComponent } // Ensure this route exists
+
     ])
   ],
   providers: [],

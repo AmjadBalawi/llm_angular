@@ -1,0 +1,131 @@
+/* Container Styling */
+.weather-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Title */
+.weather-container h1 {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+/* Label Styling */
+.weather-container label {
+    font-size: 16px;
+    color: #555555;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Destination Input */
+.weather-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    background: #f9f9f9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Input Focus State */
+.weather-input:focus {
+    border-color: #4caf50;
+    box-shadow: 0 0 6px rgba(76, 175, 80, 0.3);
+    outline: none;
+}
+
+/* Fetch Weather Button */
+.fetch-weather-button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #4caf50, #2196f3);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Button Hover Effect */
+.fetch-weather-button:hover {
+    background: linear-gradient(90deg, #2196f3, #4caf50);
+    transform: scale(1.02); /* Slightly enlarge */
+}
+
+/* Disabled Button */
+.fetch-weather-button:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+}
+
+/* Error Message */
+.error-message {
+    color: #d32f2f;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Loading Message */
+.loading-message {
+    font-size: 14px;
+    color: #4caf50;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Weather Details Container */
+.weather-details-container {
+    margin-top: 30px;
+}
+
+/* Weather Details Heading */
+.weather-details-container h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Weather Details List */
+.weather-details-list {
+    background: #f9f9f9;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333333;
+    line-height: 1.6;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Scroll if content overflows */
+    max-height: 300px; /* Set a max height for long content */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .weather-container {
+        padding: 15px;
+        margin: 20px auto;
+    }
+
+    .weather-container h1 {
+        font-size: 24px;
+    }
+
+    .fetch-weather-button {
+        font-size: 14px;
+    }
+}

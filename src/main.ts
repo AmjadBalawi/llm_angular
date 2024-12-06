@@ -11,6 +11,7 @@ import { AppModule } from './app/app.module'; // Import your app module
 import { enableProdMode } from '@angular/core';
 import { TranslateComponent } from './app/translate-service/translate.component'; // Define APP_ROUTES if needed
 import { CulturalTipsComponent } from './app/cultural-tips/cultural-tips.component'; // Define APP_ROUTES if needed
+import { WeatherComponent } from './app/weather/weather.component'; // Define APP_ROUTES if needed
 
 
 if (environment.production) {
@@ -33,7 +34,9 @@ bootstrapApplication(AppComponent, {
       { path: 'hidden-gems', component: HiddenGemsComponent },
       { path: 'destination-activities', component: DestinationActivitiesComponent },
       { path: 'translate-service', component: TranslateComponent },
-      { path: 'cultural-tips', component: CulturalTipsComponent } // Ensure this route exists
+      { path: 'cultural-tips', component: CulturalTipsComponent },
+      { path: 'weather', component: WeatherComponent } // Ensure this route exists
+
 
 
     ]) // Define your routes here instead of in the app module
