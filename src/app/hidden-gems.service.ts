@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class HiddenGemsService {
-  private apiUrl = 'https://mml-fastapi-qrndzw.fly.dev/hidden-gems'; // Update with your API base URL if deployed
+  private apiUrl = 'https://llm-fastapi.fly.dev/hidden-gems'; // Update with your API base URL if deployed
 
   constructor(private http: HttpClient) {}
 
