@@ -11,7 +11,7 @@ interface TranslationRequest {
   providedIn: 'root'
 })
 export class TranslationService {
-  private apiUrl = 'https://mml-fastapi-7.onrender.com/translate'; // Update this URL if needed
+  private apiUrl = 'https://fastapi-goexplore.vercel.app/translate'; // Update this URL if needed
 
   constructor(private http: HttpClient) {}
 
