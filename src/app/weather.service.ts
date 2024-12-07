@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class WeatherService {
-  private apiUrl = 'https://mml-fastapi-7.onrender.com/weather'; // FastAPI endpoint
+  private apiUrl = 'https://fastapi-goexplore.vercel.app/weather'; // FastAPI endpoint
 
   constructor(private http: HttpClient) {}
 
