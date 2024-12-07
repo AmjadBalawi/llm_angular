@@ -85,7 +85,49 @@ body {
 body {
   padding-top: 70px; /* Adjust space for the fixed navbar */
 }
+.donation-section {
+  background-color: #f9f9f9;
+  padding: 10px; /* Reduced padding */
+  border-radius: 8px;
+  text-align: center;
+  max-width: 200px; /* Smaller box */
+  position: fixed; /* Fixes the position */
+  bottom: 20px; /* 20px from the bottom */
+  right: 20px; /* 20px from the right */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  z-index: 1000; /* Ensure it's above other elements */
+}
 
+.donation-section h3 {
+  color: #333;
+  font-size: 16px; /* Smaller font */
+  margin-bottom: 5px;
+}
+
+.donation-section p {
+  color: #666;
+  font-size: 14px; /* Smaller font */
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.donate-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 16px; /* Smaller button */
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.donate-button:hover {
+  background-color: #0056b3;
+}
 /* Responsive Design */
 @media (max-width: 768px) {
   .navbar ul {
