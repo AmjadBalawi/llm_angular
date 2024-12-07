@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 
 export class CulturalTipsService {
-  private apiUrl = 'https://mml-fastapi-7.onrender.com/cultural-tips'; // Update with your API base URL if deployed
+  private apiUrl = 'https://fastapi-goexplore.vercel.app/cultural-tips'; // Update with your API base URL if deployed
 
   constructor(private http: HttpClient) {}
 
