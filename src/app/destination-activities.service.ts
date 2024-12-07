@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class DestinationActivitiesService {
-  private apiUrl = 'https://mml-fastapi-7.onrender.com/destination-activities';
+  private apiUrl = 'https://fastapi-goexplore.vercel.app/destination-activities';
 
   constructor(private http: HttpClient) {}
 
