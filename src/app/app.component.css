@@ -48,7 +48,7 @@ body {
   text-transform: uppercase; /* Uppercase text for emphasis */
   letter-spacing: 1px; /* Add spacing between letters */
   transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
-  padding: 5px 10px; /* Small padding for clickable area */
+  padding: 5px 4px; /* Small padding for clickable area */
 }
 
 .navbar a:hover {
@@ -85,9 +85,116 @@ body {
 body {
   padding-top: 70px; /* Adjust space for the fixed navbar */
 }
+/* Donation Section Container */
+.donation-section {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 200px;
+  position: fixed; /* Fixed at the bottom-right corner */
+  bottom: 10px;
+  right: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  z-index: 1000; /* Stays above other elements */
+  opacity: 0.9; /* Slight transparency */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
 
+/* Hover Effect */
+.donation-section:hover {
+  opacity: 1;
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Close Button */
+.close-button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #999;
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 1001; /* Above the donation section content */
+  transition: color 0.3s ease;
+}
+
+.close-button:hover {
+  color: #333;
+}
+
+/* Donate Button */
+.donate-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.donate-button:hover {
+  background-color: #0056b3;
+}
 /* Responsive Design */
 @media (max-width: 768px) {
+  .donation-section {
+    background-color: #f9f9f9; /* Light background */
+    padding: 5px; /* Minimal padding */
+    border-radius: 6px; /* Slightly rounded corners */
+    text-align: center;
+    max-width: 150px; /* Smaller width */
+    position: fixed; /* Fixed to the bottom */
+    bottom: 10px; /* Closer to the bottom */
+    right: 10px; /* Closer to the right */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    font-family: Arial, sans-serif;
+    z-index: 1000; /* Ensure visibility above other elements */
+    opacity: 0.8; /* Slight transparency to blend with content */
+  }
+
+  .donation-section:hover {
+    opacity: 1; /* Fully opaque on hover */
+  }
+
+  .donation-section h3 {
+    color: #333;
+    font-size: 12px; /* Smaller font size for heading */
+    margin-bottom: 3px; /* Minimal spacing */
+  }
+
+  .donation-section p {
+    color: #666;
+    font-size: 10px; /* Small font size for paragraph */
+    margin-bottom: 5px; /* Reduced margin */
+    line-height: 1.2; /* Compact line spacing */
+  }
+
+  .donate-button {
+    background-color: #007bff; /* Button color */
+    color: #fff;
+    padding: 5px 10px; /* Smaller button */
+    font-size: 12px; /* Smaller font */
+    font-weight: bold;
+    border: none;
+    border-radius: 4px; /* Slightly rounded corners */
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .donate-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+  }
   .navbar ul {
     flex-direction: row; /* Stack items vertically on smaller screens */
     align-items: top;

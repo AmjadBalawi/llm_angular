@@ -31,22 +31,20 @@
     <span>GoExplore</span>
   </div>
   <ul>
-    <li><a routerLink="/hidden-gems" routerLinkActive="active"><i class="fas fa-gem"></i> Hidden Spots</a></li>
-    <li><a routerLink="/destination-activities" routerLinkActive="active"><i class="fas fa-map-marker-alt"></i> Activities </a></li>
-    <li><a routerLink="/translate-service" routerLinkActive="active"><i class="fas fa-language"></i> Translate</a></li>
-    <li><a routerLink="/cultural-tips" routerLinkActive="active"><i class="fas fa-lightbulb"></i> Cultural Tips</a></li>
+    <li><a routerLink="/hidden-gems" routerLinkActive="active"><i class="fas fa-gem"></i>Hidden Spots</a></li>
+    <li><a routerLink="/destination-activities" routerLinkActive="active"><i class="fas fa-map-marker-alt"></i>Activities </a></li>
+    <li><a routerLink="/translate-service" routerLinkActive="active"><i class="fas fa-language"></i>Translate</a></li>
+    <li><a routerLink="/cultural-tips" routerLinkActive="active"><i class="fas fa-lightbulb"></i>Cultural Tips</a></li>
     <li><a routerLink="/weather" routerLinkActive="active"><i class="fas fa-lightbulb"></i> Weather </a></li>
-
+      <li><a routerLink="/about-me" routerLinkActive="active"><i class="fas fa-lightbulb"></i> about us</a></li>
   </ul>
 </div>
-<script data-noptimize="1" data-cfasync="false" data-wpfc-render="false">
-  (function () {
-      var script = document.createElement("script");
-      script.async = 1;
-      script.src = 'https://emrld.cc/MzcxODY5.js?t=371869';
-      document.head.appendChild(script);
-  })();
-</script>
+<div class="donation-section" *ngIf="isDonationSectionVisible">
+  <button class="close-button" (click)="closeDonationSection()">×</button>
+  <h3>Support Us</h3>
+  <p>Love the app? Donate!</p>
+  <a href="https://revolut.me/amjadhubb" target="_blank" class="donate-button">Donate</a>
+</div>
 
 <router-outlet></router-outlet>
 

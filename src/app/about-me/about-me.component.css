@@ -1,0 +1,74 @@
+/* Container Styling */
+.about-me {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Title */
+  .about-me h1 {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    color: #333333;
+    margin-bottom: 30px;
+  }
+  
+  /* Person Section */
+  .about-me .person {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-me .person:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Text Styling */
+  .about-me p {
+    font-size: 16px;
+    color: #555555;
+    margin-bottom: 10px;
+  }
+  
+  .about-me p strong {
+    color: #4caf50; /* Highlight key information */
+    font-weight: bold;
+  }
+  
+  /* Link Styling */
+  .about-me .profile-link {
+    color: #2196f3; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Highlight the link */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth effect */
+  }
+  
+  .about-me .profile-link:hover {
+    color: #4caf50; /* Change color on hover */
+    text-shadow: 0 0 6px rgba(76, 175, 80, 0.5); /* Glow effect */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-me {
+      padding: 15px;
+      margin: 20px auto;
+    }
+  
+    .about-me h1 {
+      font-size: 28px;
+    }
+  
+    .about-me p {
+      font-size: 14px;
+    }
+  }
+  
