@@ -14,6 +14,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 })
 export class HiddenGemsComponent {
   destination: string = '';
+  title: string = '';
   activities: SafeHtml | null = null;
   images: string[] = [];
   isLoading: boolean = false;
@@ -22,6 +23,7 @@ export class HiddenGemsComponent {
   imageSearchTerm: string = '';
   isImageLoading: boolean = false;
   imageError: string | null = null;
+
 
   constructor(
     private route: ActivatedRoute,
