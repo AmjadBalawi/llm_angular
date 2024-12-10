@@ -47,10 +47,11 @@
     <p *ngIf="isImageLoading" class="loading-message">Loading images...</p>
 
     <!-- Display Images -->
-    <div *ngIf="images?.length > 0" class="images-container">
+    <div *ngIf="images.length > 0" class="images-container">
         <h3>Images for "{{ imageSearchTerm }}":</h3>
         <div class="image-grid">
             <img *ngFor="let image of images" [src]="image" [alt]="imageSearchTerm" class="image-item" loading="lazy"/>
         </div>
     </div>
+    
 </div>
