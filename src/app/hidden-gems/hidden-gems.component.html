@@ -1,5 +1,4 @@
 <div class="destination-activities-container">
-
     <h2 class="title">Hidden Gems for Your Destination</h2>
 
     <!-- Destination Input -->
@@ -28,5 +27,30 @@
         <h3>Hidden Gems in {{ destination }}:</h3>
         <div [innerHTML]="activities" class="activities-list"></div>
     </div>
-    
+
+    <!-- Image Search Section -->
+    <h2 class="title">Find Images for Your Destination</h2>
+    <label for="image-search">Enter Search Term:</label>
+    <input
+        id="image-search"
+        type="text"
+        [(ngModel)]="imageSearchTerm"
+        placeholder="Enter image search term"
+        class="image-search-input"
+    />
+
+    <button (click)="fetchImages()" [disabled]="isImageLoading" class="fetch-button">
+        Search Images
+    </button>
+
+    <p *ngIf="imageError" class="error-message">{{ imageError }}</p>
+    <p *ngIf="isImageLoading" class="loading-message">Loading images...</p>
+
+    <!-- Display Images -->
+    <div *ngIf="images?.length > 0" class="images-container">
+        <h3>Images for "{{ imageSearchTerm }}":</h3>
+        <div class="image-grid">
+            <img *ngFor="let image of images" [src]="image" [alt]="imageSearchTerm" class="image-item" loading="lazy"/>
+        </div>
+    </div>
 </div>
