@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class HiddenGemsService {
-  private baseApiUrl = 'http://127.0.0.1:8000'; // Replace with your deployed API base URL if applicable
+  private baseApiUrl = 'https://fastapi-goexplore.vercel.app'; // Replace with your deployed API base URL if applicable
   private googleapiurl = 'https://www.googleapis.com/customsearch/v1?key=AIzaSyDMgo7wWk_Oq7tsvPxDm_rHsBqr_MX0enw&cx=23258a598f4664fde&searchType=image'; // Google Custom Search API URL
 
   constructor(private http: HttpClient) {}
