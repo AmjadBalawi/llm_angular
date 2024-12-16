@@ -9,11 +9,6 @@
     <li><a routerLink="/cultural-tips" routerLinkActive="active"><i class="fas fa-lightbulb"></i> Cultural Tips</a></li>
     <li><a routerLink="/weather" routerLinkActive="active"><i class="fas fa-lightbulb"></i> Weather</a></li>
     <li><a routerLink="/about-me" routerLinkActive="active"><i class="fas fa-lightbulb"></i> About Us</a></li>
-    <li>
-      <a href="https://www.youtube.com/watch?v=97LvrhQBQnU" target="_blank">
-        <i class="fab fa-youtube"></i> YouTube
-      </a>
-    </li>
   </ul>
 </div>
 <div class="donation-section" *ngIf="isDonationSectionVisible">
@@ -21,6 +16,9 @@
   <h3>Support Us</h3>
   <p>Love the app? Donate!</p>
   <a href="https://revolut.me/amjadhubb" target="_blank" class="donate-button">Donate</a>
+  <a href="https://www.youtube.com/watch?v=97LvrhQBQnU" target="_blank" class="youtube-icon">
+    <i class="fab fa-youtube"></i>
+  </a>
 </div>
 
 <router-outlet></router-outlet>
