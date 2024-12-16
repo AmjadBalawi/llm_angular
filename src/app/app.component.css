@@ -139,7 +139,7 @@ body {
 .donate-button {
   background-color: #007bff;
   color: #fff;
-  padding: 8px 16px;
+  padding: 8px 12px 17px;
   font-size: 14px;
   font-weight: bold;
   border: none;
@@ -159,6 +159,7 @@ body {
 /* Specific Styles for the YouTube Button */
 .youtube-button {
   background-color: #ff0000; /* YouTube red */
+  padding: 12px 12px;
 }
 
 .youtube-button:hover {
