@@ -144,6 +144,32 @@ body {
 .donate-button:hover {
   background-color: #0056b3;
 }
+/* YouTube Button */
+.youtube-button {
+  background-color: #ff0000; /* YouTube red */
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.youtube-button:hover {
+  background-color: #cc0000; /* Darker red on hover */
+}
+
+.youtube-button i {
+  margin-right: 8px; /* Space between icon and text */
+  font-size: 16px; /* Adjust icon size */
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .donation-section {
